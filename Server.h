@@ -8,7 +8,7 @@
 #include <QWebSocketServer>
 #include "ByoYomiClock.h"
 // AI-assisted: see AI11 in docs/AI_Declaration.md (shared rules include fix).
-#include "GoMatch.h"
+#include "src/Rules/GoMatch.h"
 #include <array>
 #include <memory>
 
