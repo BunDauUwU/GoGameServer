@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
         return 1;
     }
     std::fprintf(stdout,
-                 "Listening on ws://127.0.0.1:%u\nJSON storage: %s\n",
+                 "Listening on port %u\nJSON storage: %s\n",
                  port,
                  qPrintable(server.dataFile()));
     std::fflush(stdout);

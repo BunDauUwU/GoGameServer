@@ -55,7 +55,7 @@ bool Server::start(quint16 port, QString &error)
     QJO data;
     if ((!QFileInfo::exists(m_dataFile) && !writeData({}, error)) || !readData(data, error))
         return false;
-    if (!m_server.listen(QHostAddress::LocalHost, port)) {
+    if (!m_server.listen(QHostAddress::AnyIPv4, port)) {
         error = m_server.errorString();
         return false;
     }

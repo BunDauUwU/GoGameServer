@@ -7,12 +7,12 @@ find_package(Qt6 6.2 REQUIRED COMPONENTS Core Network WebSockets)
 
 add_library(goGameServer STATIC
     Server.cpp Server.h ByoYomiClock.h
-    ../src/Rules/GoMatch.cpp ../src/Rules/GoMatch.h
+    src/Rules/GoMatch.cpp src/Rules/GoMatch.h
 )
 target_link_libraries(goGameServer PUBLIC Qt6::Core Qt6::Network Qt6::WebSockets)
 target_include_directories(goGameServer PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}
-    ${CMAKE_CURRENT_SOURCE_DIR}/../src/Rules
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/Rules
 )
 
 qt_add_executable(appserver main.cpp)
